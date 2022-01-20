@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <title>Aula de Jquery</title>
+
+        <script src="jquery-3.6.0.min.js"></script>
+
+        <style>
+            .titulo {
+                color: blue;
+            }
+        </style>
+
+
+    </head>
+
+    <body>
+        <h1 class="titulo">Aula de Jquery</h1>
+
+        <input id="cor" type="color" />
+
+        <button onclick="mudar()">Mudar cor</button>
+        <button id="mudar" >Mudar Fundo</button>
+
+        <script>        
+            
+            function mudar()
+            {
+                var el = jQuery(".titulo");
+                var valor = $("#cor").val();
+
+                console.log(valor);
+
+                el.css("color", valor);
+            }
+
+            function mudarFundo()
+            {
+                var el = jQuery(".titulo");
+                var valor = $("#cor").val();
+
+                el.css("background-color", valor);
+            }
+
+            // add evento de forma
+            $("#mudar").click(mudarFundo);
+            
+
+        </script>
+
+    </body>
+</html>
